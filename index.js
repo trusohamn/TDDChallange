@@ -2,7 +2,6 @@
 const https = require('https');
 
 function getJSONDataWithHttps(path, callback) {
-
   https.get(path, res => {
     let data = '';
     res.on('data', chunk => data += chunk);
@@ -11,6 +10,7 @@ function getJSONDataWithHttps(path, callback) {
       callback(parsedData);
     });
   });
+  
 }
 
 module.exports.getJSONDataWithHttps = getJSONDataWithHttps;
