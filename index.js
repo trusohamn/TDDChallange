@@ -1,5 +1,16 @@
-function helloWorld() {
-  return 'Hello World!';
+/*jshint esversion: 6 */
+const https = require('https');
+
+function getJSONDataWithHttps(path, callback) {
+
+  https.get(path, res => {
+    let data = '';
+    res.on('data', chunk => data += chunk);
+    res.on('end', () => {
+      const parsedData = JSON.parse(data);
+      callback(parsedData);
+    });
+  });
 }
 
-module.exports.helloWorld = helloWorld;
+module.exports.getJSONDataWithHttps = getJSONDataWithHttps;

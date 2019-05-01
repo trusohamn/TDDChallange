@@ -2,19 +2,16 @@
 const assert = require('assert')
 const answer = require('./index')
 
-describe('helloWorld function', () => {
-  it('is a function', function () {
-    assert.equal('function', typeof answer.helloWorld);
+describe('getDataWithHttps', () => {
+  const path = 'https://swapi.co/api/people/';
+  it('fetches people from swapi', (done) => {
+    answer.getJSONDataWithHttps(path, (data) => {
+      console.log('count: ' + data.count);
+      const isCount = data.count > 0;
+      assert.equal(true, isCount);
+      done();
+    });
   });
-
-  it('returns hello world', () => {
-    assert.equal(answer.helloWorld(), 'Hello World!');
-  })
 });
 
-describe('findFirstNumberInArray function', () => {
-  it('is a function', function () {
-    assert.equal('function', typeof answer.add);
-  });
 
-});
