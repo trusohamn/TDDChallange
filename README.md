@@ -1,5 +1,5 @@
 # BasicJS branch
 
 ## Setup:
-- npm run install
+- npm install
 - npm run test
