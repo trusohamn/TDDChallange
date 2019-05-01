@@ -12,7 +12,7 @@ describe('helloWorld function', () => {
   })
 });
 
-describe('add function', () => {
+describe('findFirstNumberInArray function', () => {
   it('is a function', function () {
     assert.equal('function', typeof answer.add);
   });
