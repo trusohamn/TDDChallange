@@ -19,4 +19,7 @@ describe('findFirstNumberInArray function', () => {
   it('returns a proper value', () => {
     assert.equal(22, answer.findFirstNumberInArray(['hi dude', '22', '123']));
   });
+  it('returns XX when no such value', () => {
+    assert.equal('XX', answer.findFirstNumberInArray(['hi dude', 'comon', '']));
+  });
 });
