@@ -14,5 +14,8 @@
   "devDependencies": {
     "jshint": "^2.10.0",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^1.19.0"
   }
 }
