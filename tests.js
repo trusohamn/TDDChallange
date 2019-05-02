@@ -13,8 +13,10 @@ describe('helloWorld function', () => {
 });
 
 describe('findFirstNumberInArray function', () => {
-  it('is a function', function () {
-    assert.equal('function', typeof answer.add);
+  it('is a function', () => {
+    assert.equal('function', typeof answer.findFirstNumberInArray);
   });
-
+  it('returns a proper value', () => {
+    assert.equal(22, answer.findFirstNumberInArray(['hi dude', '22', '123']));
+  });
 });
