@@ -4,7 +4,7 @@ function helloWorld() {
 }
 
 function findFirstNumberInArray(yourArray) {
-  return yourArray.find(el => typeof el !== el);
+  return yourArray.find(e => ! isNaN(e));
 }
 
 module.exports.helloWorld = helloWorld;
